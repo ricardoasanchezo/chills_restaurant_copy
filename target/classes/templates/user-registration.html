@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+	<div th:replace="fragments/head :: head"></div>
+	<script type="text/javascript" th:src="@{/script/user-registration-script.js}"></script>
+</head>
+<body>
+
+<div id="modal">
+	<div id="modal-box">
+		<div id="modal-title"></div>
+		<div id="modal-message"></div>
+		<button id="modal-button">Ok</button>
+	</div>
+</div>
+
+<form class="my-form flex-column box-shadow">
+	<label for="email">Email</label>
+	<input type="email" id="email" name="email" required>
+	
+	<label for="password">Password</label>
+	<input type="password" id="password" name="password" required>
+	
+	<label for="confirmPassword">Confirm Password</label>
+	<input type="password" id="confirmPassword" name="confirmPassword" required>
+	
+	<label for="name">Name</label>
+	<input type="text" id="name" name="name" required>
+	
+	<label for="primaryPhone">Primary Phone</label>
+	<input type="tel" id="primaryPhone" name="primaryPhone" required>
+	
+	<label for="secondaryPhone">Secondary Phone</label>
+	<input type="tel" id="secondaryPhone" name="secondaryPhone" required>
+	
+	<label for="address">Address</label>
+	<input type="text" id="address" name="address" required>
+	
+	<button id="form-button" type="button" onclick="register()">Register</button>
+</form>
+
+</body>
+</html>

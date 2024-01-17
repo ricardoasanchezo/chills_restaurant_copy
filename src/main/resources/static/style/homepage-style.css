@@ -1,0 +1,145 @@
+h1
+{
+    text-align: center;
+}
+
+div.gallery img
+{
+    width: 100%;
+    height: auto;
+}
+
+div.desc
+{
+    padding: 15px;
+    text-align: center;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+.responsive
+{
+    padding: 0 6px;
+    float: left;
+    width: 15%;
+    margin: 55px;
+}
+
+.clearfix:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.heading
+{
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.fa
+{
+    font-size: 25px;
+}
+
+.checked
+{
+    color: orange;
+}
+
+.side
+{
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+}
+
+.middle
+{
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bar-container
+{
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+.bar-5 {width: 75%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 46%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 25%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 10%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 6%; height: 18px; background-color: #f44336;}
+
+#social-media-icons
+{
+    padding: 5px;
+    font-size: 40px;
+    color: var(--chill-blue);
+    margin-top: 6px;
+}
+
+.pictures-container
+{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.picturesText
+{
+    display: flex;
+    font-size: 20px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-style: italic;
+}
+
+#info
+{
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#aboutUsInfo
+{
+    text-align: center;
+    padding: 20px;
+    font-size: 22px;
+    background-color: rgba(133, 186, 255, 0.5);
+    border-radius: 5px;
+}
+
+#contact
+{
+    margin-right: 15%;
+}
+
+#openingHours
+{
+    margin-right: 13%;
+}

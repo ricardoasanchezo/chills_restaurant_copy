@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Users</title>
+	<div th:replace="fragments/head :: head"></div>
+	<script src="/script/view-orders-script.js" defer></script>
+	<link rel="stylesheet" href="/style/view-users-style.css">
+</head>
+<body>
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	<div id="content">
+		
+		<div class="search-container">
+			<img src="/images/search.svg" class="search-icon" alt="Search icon" >
+			<input type="text" id="searchInput" placeholder="Search..." oninput=searchOrders(this.value.toLowerCase())>
+		</div>
+		
+		<table id="orders-table">
+			<thead>
+			<tr>
+				<th>ID</th>
+				<th>Creator</th>
+				<th>Owner</th>
+				<th>Created At</th>
+				<th>Type</th>
+				<th>State</th>
+			</tr>
+			</thead>
+			<tbody id="orders-table-body">
+			</tbody>
+		</table>
+	
+	</div>
+</div>
+
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

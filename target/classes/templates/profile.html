@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>User Profile</title>
+	<div th:replace="fragments/head :: head"></div>
+	<link rel="stylesheet" href="/style/profile-style.css">
+	<script src="/script/profile-script.js" defer></script>
+</head>
+
+<body>
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	<div id="content">
+		
+		<div id="profile-container" class="box-shadow fit-content margin-auto">
+			<img src="/images/logo.png" class="block logo-medium margin-bottom margin-auto" alt="Profile picture">
+			
+			<div id="profile-info-container">
+				<div class="italic">User Id: </div>
+				<div id="id" class="bold" th:text="${myUser.getId()}"></div>
+				
+				<label for="name" class="italic">Name</label>
+				<input type="text" th:value="${myUser.getName()}" id="name" name="name" disabled>
+				
+				<label for="email" class="italic">Email</label>
+				<input type="email" th:value="${myUser.getEmail()}" id="email" name="email" disabled>
+				
+				<label for="primaryPhone" class="italic">Primary Phone</label>
+				<input type="text" th:value="${myUser.getPrimaryPhone()}" id="primaryPhone" name="primaryPhone" disabled>
+				
+				<label for="secondaryPhone" class="italic">Secondary Phone</label>
+				<input type="text" th:value="${myUser.getSecondaryPhone()}" id="secondaryPhone" name="secondaryPhone" disabled>
+				
+				<label for="address" class="italic">Address</label>
+				<input type="text" th:value="${myUser.getAddress()}" id="address" name="address" disabled>
+			</div>
+			
+			<div id="button-container" class="flex-row margin-top">
+				<button class="button green" type="button" id="edit-button" onclick="editProfile()">Edit</button>
+				<button class="button green" style="display: none" type="button" id="save-button" onclick="saveChanges()">Save</button>
+				<button class="button red" style="display: none" type="button" id="cancel-button" onclick="cancelEdit()">Cancel</button>
+				
+				<button class="button red" style="margin-left: auto" type="button" id="delete-user-button" onclick="deleteMyAccount()">Delete</button>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+<footer th:replace="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

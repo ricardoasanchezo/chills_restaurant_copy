@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+	<title>Log In</title>
+	<div th:replace="fragments/head :: head"></div>
+</head>
+<body>
+
+<!--<form class="my-form flex-column box-shadow" method="post" action="/auth/employee/login">-->
+<form class="my-form flex-column box-shadow">
+	<img src="/images/logo.png" class="logo-medium margin-bottom" alt="Chill's Restaurant Logo">
+	
+	<div th:if="${param.error}" class="red padding margin-bottom">Invalid username or password</div>
+	<div th:if="${param.logout}" class="green padding margin-bottom">You have been logged out</div>
+	
+	<label for="fingerprint">Fingerprint</label>
+	<input type="text" id="fingerprint" name="fingerprint" required autofocus>
+	
+	<button type="button" onclick="submitLoginForm()">Log In</button>
+	
+	<a href="/auth/register">New? Register here!</a>
+</form>
+
+<script>
+	async function submitLoginForm()
+	{
+		let fingerprint = document.getElementById('fingerprint').value;
+		
+		let url = 'http://localhost:8080/auth/employee/login';
+		
+		const response = await fetch(url, {
+			method: 'POST',
+			redirect: 'follow',
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				"fingerprint": fingerprint
+			})
+		});
+		
+		if (response.ok)
+			window.location.href = 'http://localhost:8080/orders/tickets';
+		else
+			alert('not ok');
+	}
+</script>
+
+</body>
+</html>

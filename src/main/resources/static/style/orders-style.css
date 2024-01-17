@@ -1,0 +1,26 @@
+#orders-title
+{
+    text-align: center;
+    background-color: var(--chill-blue);
+    font-size: 12mm;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: rgba(132, 186, 224, 0.4);
+    border-style: outset;
+}
+
+/*.orders-items-titles*/
+/*{*/
+/*    text-align: center;*/
+/*    font-size: 6mm;*/
+/*    padding: 5px;*/
+/*    margin: 5px;*/
+/*}*/
+
+/*.orders-item*/
+/*{*/
+/*    display: inline-block;*/
+/*    margin: 15px;*/
+/*    font-size: 5mm;*/
+/*    padding: 10px;*/
+/*}*/

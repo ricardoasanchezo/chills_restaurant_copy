@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="250f15c9-b79d-4c2c-87db-37785291aa27" name="Changes" comment="Edited properties for local database">
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ricardo/chillsrestaurant/services/MyUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ricardo/chillsrestaurant/services/MyUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/homepage-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/style/homepage-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Python Script" />
+        <option value="Enum" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VV6gtdMUuyQqaFhcCslEZSuMbZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/IdeaProjects/chillsrestaurant/src/main/resources/static/images&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c8421eafa9db7f44c54697980437c9d4&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ricardo.chillsrestaurant.controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\chillsrestaurant\src\main\resources\static\images" />
+      <recent name="C:\IdeaProjects\chillsrestaurant\src\main\java\com\ricardo\chillsrestaurant" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IdeaProjects\chillsrestaurant\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ChillsrestaurantApplication">
+    <configuration name="ChillsrestaurantApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chillsrestaurant" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ricardo.chillsrestaurant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ricardo.chillsrestaurant" />
+      <option name="MAIN_CLASS_NAME" value="com.ricardo.chillsrestaurant.ChillsrestaurantApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChillsrestaurantApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="chillsrestaurant" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ricardo.chillsrestaurant.ChillsrestaurantApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ChillsrestaurantApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="250f15c9-b79d-4c2c-87db-37785291aa27" name="Changes" comment="" />
+      <created>1694909015391</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694909015391</updated>
+      <workItem from="1694909017276" duration="326000" />
+      <workItem from="1694912657394" duration="5685000" />
+      <workItem from="1694982692349" duration="675000" />
+      <workItem from="1695049845178" duration="349000" />
+      <workItem from="1695146635166" duration="3090000" />
+      <workItem from="1695319025377" duration="5932000" />
+      <workItem from="1695335389789" duration="11715000" />
+      <workItem from="1695483109241" duration="22592000" />
+      <workItem from="1695568790273" duration="26648000" />
+      <workItem from="1695650534946" duration="19358000" />
+      <workItem from="1695748204280" duration="11097000" />
+      <workItem from="1695769767499" duration="2624000" />
+      <workItem from="1695777503383" duration="438000" />
+      <workItem from="1695834144169" duration="88000" />
+      <workItem from="1695861514307" duration="367000" />
+      <workItem from="1695867906497" duration="79000" />
+      <workItem from="1695868006271" duration="112000" />
+      <workItem from="1695910045067" duration="2779000" />
+      <workItem from="1695926352415" duration="126000" />
+      <workItem from="1695931789791" duration="264000" />
+      <workItem from="1696285282735" duration="558000" />
+      <workItem from="1696353929520" duration="7729000" />
+      <workItem from="1696526020697" duration="2059000" />
+      <workItem from="1696551617292" duration="35366000" />
+      <workItem from="1696776904985" duration="22064000" />
+      <workItem from="1697046969917" duration="3463000" />
+      <workItem from="1697062067462" duration="10763000" />
+      <workItem from="1697128489742" duration="27651000" />
+      <workItem from="1697299996085" duration="21720000" />
+      <workItem from="1697476800105" duration="625000" />
+      <workItem from="1697735834481" duration="8050000" />
+      <workItem from="1697838760501" duration="8000" />
+      <workItem from="1697859767414" duration="5000" />
+      <workItem from="1698167292597" duration="415000" />
+      <workItem from="1698170197931" duration="605000" />
+      <workItem from="1698342995753" duration="8787000" />
+      <workItem from="1698417925704" duration="388000" />
+      <workItem from="1698435613354" duration="2879000" />
+      <workItem from="1698709723607" duration="290000" />
+      <workItem from="1699982581079" duration="1650000" />
+      <workItem from="1700413382821" duration="19273000" />
+      <workItem from="1700586385686" duration="8353000" />
+      <workItem from="1700660581545" duration="1052000" />
+      <workItem from="1700673213154" duration="5299000" />
+      <workItem from="1700852106308" duration="20470000" />
+      <workItem from="1701102661670" duration="1058000" />
+      <workItem from="1701190523968" duration="43542000" />
+      <workItem from="1701355499087" duration="213000" />
+      <workItem from="1701364258561" duration="3373000" />
+      <workItem from="1701719984935" duration="280000" />
+      <workItem from="1704462438119" duration="98000" />
+      <workItem from="1705503409874" duration="4349000" />
+      <workItem from="1705513743300" duration="624000" />
+      <workItem from="1705514693805" duration="312000" />
+    </task>
+    <task id="LOCAL-00001" summary="GitHub sync test 1">
+      <created>1694968346079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694968346079</updated>
+    </task>
+    <task id="LOCAL-00002" summary="GitHub sync test 2">
+      <created>1695147800598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1695147800598</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Item controller and ItemService methods">
+      <created>1695323722050</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695323722050</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added update methods to ItemService">
+      <created>1695326316763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695326316763</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added user registration form and script">
+      <created>1695755647688</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695755647688</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed foreign key constraints on the Items entity">
+      <created>1696359113710</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696359113710</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added order entity and implemented update item method">
+      <created>1696718567450</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696718567450</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added login handlers for blocking users if they fail authentication">
+      <created>1696805293847</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696805293847</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added profile page">
+      <created>1697136679086</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697136679086</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added example page">
+      <created>1697137535463</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1697137535463</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Improved manager user view and updated example page">
+      <created>1697736188309</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1697736188309</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactored fetching menu items">
+      <created>1698346173239</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698346173239</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Improved kitchen view of order tickets">
+      <created>1700875316219</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700875316219</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Improved profile view of users and fixed timer not rendering in order tickets">
+      <created>1701198296680</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701198296680</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Changed ADMIN role to MANAGER role in method security since ADMIN does not exist and removed domain from fetch requests in javascript">
+      <created>1701200605296</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701200605296</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed removeItem method in Item Service">
+      <created>1701309940478</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701309940478</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added table to view orders and refactored some manager endpoints from the manager controller to the web controller">
+      <created>1701328826665</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701328826665</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added modal response to user registration and commented out fingerprint authentication">
+      <created>1701331602247</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701331602247</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added employee menu to create orders for customers">
+      <created>1701368419806</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1701368419806</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Edited properties for local database">
+      <created>1704462515081</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1704462515081</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="GitHub sync test 1" />
+    <MESSAGE value="GitHub sync test 2" />
+    <MESSAGE value="Added Item controller and ItemService methods" />
+    <MESSAGE value="Added update methods to ItemService" />
+    <MESSAGE value="Added user registration form and script" />
+    <MESSAGE value="Fixed foreign key constraints on the Items entity" />
+    <MESSAGE value="Added order entity and implemented update item method" />
+    <MESSAGE value="Added login handlers for blocking users if they fail authentication" />
+    <MESSAGE value="Added profile page" />
+    <MESSAGE value="Added example page" />
+    <MESSAGE value="Improved manager user view and updated example page" />
+    <MESSAGE value="Refactored fetching menu items" />
+    <MESSAGE value="Improved kitchen view of order tickets" />
+    <MESSAGE value="Improved profile view of users and fixed timer not rendering in order tickets" />
+    <MESSAGE value="Changed ADMIN role to MANAGER role in method security since ADMIN does not exist and removed domain from fetch requests in javascript" />
+    <MESSAGE value="Fixed removeItem method in Item Service" />
+    <MESSAGE value="Added table to view orders and refactored some manager endpoints from the manager controller to the web controller" />
+    <MESSAGE value="Added modal response to user registration and commented out fingerprint authentication" />
+    <MESSAGE value="Added employee menu to create orders for customers" />
+    <MESSAGE value="Edited properties for local database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited properties for local database" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

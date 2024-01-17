@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <div th:replace="fragments/head :: head"></div>
+    <link rel="stylesheet" href="/style/orders-style.css">
+	<script src="/script/order-script.js" defer></script>
+	<script src="/script/order-ticket.js"></script>
+	<script src="/script/order-timer.js"></script>
+</head>
+<body>
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	
+	<div class="padding margin-bottom bg-light">
+		<div class="flex-row margin-bottom">
+			<h2>Open orders</h2>
+			<button onclick="toggleHideContainer(this, 'order-container')">Hide</button>
+		</div>
+		<div id="order-container" class="flex-row-wrap grid-gap-20px"></div>
+	</div>
+	
+	
+	<div class="padding margin-bottom bg-light">
+		<div class="flex-row margin-bottom">
+			<h2>Closed orders</h2>
+			<button onclick="toggleHideContainer(this, 'closed-order-container')">Hide</button>
+		</div>
+		<div id="closed-order-container" class="flex-row-wrap grid-gap-20px"></div>
+	</div>
+</div>
+
+</body>
+</html>

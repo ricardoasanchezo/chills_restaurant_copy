@@ -1,0 +1,583 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Menu</title>-->
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<!--    <link rel="stylesheet" href="/style/menu-style.css">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>-->
+<!--    <script src="/script/menu-employees-script.js"></script>-->
+<!--    <div th:replace="fragments/head :: head"></div>-->
+<!--</head>-->
+
+<!--<body onload=itemsOnMenu()>-->
+
+<!--<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>-->
+
+<!--<div id="page-container">-->
+<!--    <div id="content">-->
+<!--        <div id="itemsOnMenu">-->
+<!--            <h5>Menu Items Available</h5>-->
+
+<!--        </div>-->
+<!--        <button id="btnModal3" class="btnOpenModal" onclick=updateAvailability()>Update Availability</button>-->
+
+<!--        <div class="sidenav" id="sidenav-order">-->
+<!--            <h4 class="sidenav-title">Order:</h4>-->
+<!--            <a href="javascript:void(0)" class="btnCloseSideNav" onclick="closeNavOrder()">&times;</a>-->
+<!--            <br>-->
+<!--            <p id="itemsOnOrder">-->
+<!--            </p>-->
+<!--            <br>-->
+<!--            <div id="orderTypeOptions">-->
+<!--                <label for="orderType">Order Type:</label>-->
+<!--                <select name="orderType" id="orderType">-->
+<!--                    <option value="DINE_IN">Dine In</option>-->
+<!--                    <option value="CARRY_OUT">Carry Out</option>-->
+<!--                    <option value="DELIVERY">Delivery</option>-->
+<!--                </select>-->
+<!--            </div>-->
+<!--            <br>-->
+<!--            <label for="customerComments">Comments:</label>-->
+<!--            <textarea id="customerComments" name="customerComments" rows="4"></textarea>-->
+<!--            <br>-->
+<!--            <hr>-->
+<!--            <div id="subtotal"></div>-->
+<!--            <div id="taxes"></div>-->
+<!--            <div id="orderTotal"></div>-->
+<!--            <button type="button" id="btnPlaceOrder">Place Order</button>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--<div id="modalSuccess" class="modal">-->
+<!--    <div class="modal-content success-modal">-->
+<!--        <div class="modal-header">-->
+<!--            <h2>Confirmation</h2>-->
+<!--        </div>-->
+<!--        <div id="successModalInfo">-->
+<!--            <p>Task completed successfully!</p>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--            <button type="button" id="btnConfirm">Ok</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div id="modalError" class="modal">-->
+<!--    <div class="modal-content warning-modal">-->
+<!--        <div class="modal-header">-->
+<!--            <h2>Error</h2>-->
+<!--        </div>-->
+<!--        <div id="errorModalInfo">-->
+<!--            <p>An error occurred, please try again.</p>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--            <button type="button" id="btnError">Ok</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div id="modalOrder" class="modal">-->
+<!--    <div class="modal-content success-modal">-->
+<!--        <div class="modal-header">-->
+<!--            <h2>Order Placed</h2>-->
+<!--        </div>-->
+<!--        <div id="orderModalInfo">-->
+<!--            <p>Your order has been placed.<br></p>-->
+<!--            <div id="orderInfo">-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--            <button type="button" id="btnOrder">Ok</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div id="modalPayment" class="modal">-->
+<!--    <div class="modal-content payment-content">-->
+<!--        <div class="modal-header">-->
+<!--            <span class="close" id="closePayment">&times;</span>-->
+<!--            <h2>Payment</h2>-->
+<!--        </div>-->
+<!--        <div class="row">-->
+<!--            <div class="column col-65">-->
+<!--                <div id="paymentInfo">-->
+<!--                    <div class="container">-->
+<!--                        <h3>Billing Information</h3>-->
+<!--                        <div id="billingInformation">-->
+<!--                            <div id="userInfo">-->
+<!--                                <b>Name: </b>-->
+<!--                                <p id="name" class="userInfo"></p><br>-->
+<!--                                <b>Email: </b>-->
+<!--                                <p id="email" class="userInfo"></p><br>-->
+<!--                                <b>Phone Number: </b>-->
+<!--                                <p id="phone" class="userInfo"></p><br>-->
+<!--                                <b>Address: </b>-->
+<!--                                <p id="address" class="userInfo"></p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div id="deliveryOption">-->
+<!--                            <label>-->
+<!--                                <input type="checkbox" checked="checked" name="sameadr" id="sameadr"-->
+<!--                                       onclick=checkDelivery()> Delivery address same as billing-->
+<!--                            </label>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="column col-35">-->
+<!--                <div id="paymentModalInfo">-->
+<!--                    <div class="orderSummary">-->
+<!--                        <div class="container">-->
+<!--                            <h4>Cart <i class="fa fa-shopping-cart"></i><span class="price" id="itemTotal"></span></h4>-->
+<!--                            <p id="product"><span class="price"></span></p>-->
+<!--                            <br>-->
+<!--                            <p id="orderTypeInfo">Type: <span id="orderTypeSelected"></span></p><br>-->
+<!--                            <hr>-->
+<!--                            <p>Total<br>-->
+<!--                                <b>-->
+<!--                                    <span class="price" id="summarySubtotal"></span><br>-->
+<!--                                    <span class="price" id="summaryTaxes"></span><br>-->
+<!--                                    <span class="price" id="summaryTotal"></span>-->
+<!--                                </b>-->
+<!--                            </p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="modal-footer">-->
+<!--            <button type="button" class="btn" id="btnPayOrder" onclick=createOrder()>Checkout</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<footer th:insert="~{fragments/footer :: footer}"></footer>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/style/menu-style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="/script/menu-employees-script.js"></script>
+	<div th:replace="fragments/head :: head"></div>
+</head>
+
+<body onload="getMenu();availability()">
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	<div id="content">
+
+    <span id="orderMenu" onclick="openNavOrder()">
+      <span class="material-symbols-outlined">shopping_cart</span>
+    </span>
+		
+		<th:block sec:authorize="hasRole('MANAGER')">
+            <span id="manageMenu" onclick="openNavManage()">
+              <span class="material-symbols-outlined">settings</span>
+            </span>
+		</th:block>
+		
+		<th:block sec:authorize="hasRole('MANAGER')">
+			<div class="sidenav" id="sidenav-manage-menu">
+				<h4 class="sidenav-title">Manage Menu:</h4>
+				<br>
+				<a href="javascript:void(0)" class="btnCloseSideNav" onclick="closeNavManage()">&times;</a>
+				<button id="btnModalAdd" class="btnOpenModal">Add Item</button>
+				<button id="btnModalUpdate" class="btnOpenModal">Update Item</button>
+				<button id="btnModalDelete" class="btnOpenModal">Delete Item</button>
+				
+				<div id="modalAddItem" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close" id="closeAdd">&times;</span>
+							<h2>Add Item to Menu</h2>
+						</div>
+						<div id="addItemForm">
+							<label for="itemName">Name:</label>
+							<input type="text" id="itemName" name="itemName"><br>
+							
+							<label for="itemDescription">Description:</label>
+							<input type="text" id="itemDescription" name="itemDescription"><br>
+							
+							<label for="itemPrice">Price:</label>
+							<input type="text" id="itemPrice" name="itemPrice" placeholder="900"><br>
+							<p class="inputNotes">*Insert as a whole number. (Ex: 900 -> 9.00)</p>
+							
+							<label for="itemCategory">Category:</label>
+							<input type="text" id="itemCategory" name="itemCategory"><br>
+							
+							<label for="itemTags">Tags:</label>
+							<input type="text" id="itemTags" name="itemTags" placeholder="Deep Fried, Chicken..."><br>
+							<p class="inputNotes">*If there is more than one tag, please separate each one with a
+								comma!</p>
+							
+							<label for="itemPicture">Picture:</label>
+							<input type="text" id="itemPicture" name="itemPicture" placeholder="https://..."><br>
+							<p class="inputNotes">*Please insert the link for the image!</p>
+							
+							<button type="button" id="btnAddItem" onclick=addItem()>Add Item</button>
+						</div>
+						<div class="modal-footer">
+						</div>
+					</div>
+				</div>
+				
+				<div id="modalUpdateItem" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close" id="closeUpdate">&times;</span>
+							<h2>Update Item on Menu</h2>
+						</div>
+						
+						<div id="updateItemForm">
+							<label for="items"></label>
+							<select id="items" name="items">
+								<option value="null">---</option>
+							</select>
+							
+							<button id="getItem" onclick=getItem()>Load Item</button>
+							<br><br>
+							
+							<label for="updatedName">Name:</label>
+							<input type="text" id="updatedName" name="newName" disabled="disabled"><br>
+							
+							<label for="updatedDescription">Description:</label>
+							<input type="text" id="updatedDescription" name="newDescription" disabled="disabled"><br>
+							
+							<label for="updatedPrice">Price:</label>
+							<input type="text" id="updatedPrice" name="newPrice" placeholder="900"
+								   disabled="disabled"><br>
+							<p class="inputNotes">*Insert as a whole number. (Ex: 900 -> 9.00)</p>
+							
+							<label for="updatedCategory">Category:</label>
+							<input type="text" id="updatedCategory" name="updatedCategory" disabled="disabled"><br>
+							
+							<label for="updatedTags">Tags:</label>
+							<input type="text" id="updatedTags" name="updatedTags" placeholder="Deep Fried, Chicken..."
+								   disabled="disabled"><br>
+							<p class="inputNotes">*If there is more than one tag, please separate each one with a
+								comma!</p>
+							
+							<label for="updatedPicture">Picture:</label>
+							<input type="text" id="updatedPicture" name="updatedPicture" placeholder="https://..."
+								   disabled="disabled"><br>
+							<p class="inputNotes">*Please insert the link for the image!</p>
+							<br>
+							
+							<!--              <input type="radio" id="available" name="availability" value="true" disabled="disabled">-->
+							<!--              <label for="available">Available</label><br>-->
+							<!--              <input type="radio" id="unavailable" name="availability" value="false" disabled="disabled">-->
+							<!--              <label for="unavailable">Unavailable</label><br>-->
+							
+							<button type="button" id="btnUpdateItem" onclick=updateItem()>Update Item</button>
+						</div>
+						<div class="modal-footer">
+						</div>
+					</div>
+				</div>
+				
+				<div id="modalRemoveItem" class="modal">
+					<div class="modal-content">
+						<div class="modal-header">
+							<span class="close" id="closeDelete">&times;</span>
+							<h2>Remove Item on Menu</h2>
+						</div>
+						
+						<div id="removeItemForm">
+							<label for="allItems"></label>
+							<select id="allItems" name="allItems">
+								<option value="null">---</option>
+							</select>
+							
+							<button id="getItemToRemove" onclick=getItemRemove()>Load Item</button>
+							<br><br>
+							
+							<div id="itemInfo">
+								<p><b>Name: </b><span id="itemNameRemove"></span></p><br>
+								<p><b>Description: </b><span id="itemDescriptionRemove"></span></p><br>
+								<p><b>Price: </b><span id="itemPriceRemove"></span></p><br>
+								<p><b>Category: </b><span id="itemCategoryRemove"></span></p><br>
+								<p><b>Tags: </b><span id="itemTagsRemove"></span></p><br>
+								<p><b>Availability: </b><span id="itemAvailabilityRemove"></span></p><br>
+								<!--                                <p>Picture Link:<span id="itemPictureRemove"></span></p>-->
+								<img id="removePictureDisplay" src="" alt="">
+							</div>
+							<br>
+							<button type="button" id="btnRemoveItem" onclick=removeItem() disabled>Remove Item</button>
+						</div>
+						<div class="modal-footer">
+						</div>
+					</div>
+				</div>
+				<br>
+				<div id="availability">
+					<h5>Items Availability</h5>
+					<hr>
+				</div>
+				<button id="btnModal3" class="btnOpenModal" onclick=updateAvailability()>Update Availability</button>
+			</div>
+		</th:block>
+		
+		<div class="sidenav" id="sidenav-order">
+			<h4 class="sidenav-title">Order:</h4>
+			<a href="javascript:void(0)" class="btnCloseSideNav" onclick="closeNavOrder()">&times;</a>
+			<br>
+			<p id="itemsOnOrder">
+			</p>
+			<br>
+			<div id="orderTypeOptions">
+				<label for="orderType">Order Type:</label>
+				<select name="orderType" id="orderType">
+					<option value="DINE_IN">Dine In</option>
+					<option value="CARRY_OUT">Carry Out</option>
+					<option value="DELIVERY">Delivery</option>
+				</select>
+			</div>
+			<br>
+			<label for="customerComments">Comments:</label>
+			<textarea id="customerComments" name="customerComments" rows="4"></textarea>
+			<br>
+			<hr>
+			<div id="subtotal"></div>
+			<div id="taxes"></div>
+			<div id="orderTotal"></div>
+			<button type="button" id="btnPlaceOrder">Place Order</button>
+		</div>
+		
+		<h1 id="menu-title">Chill's Restaurant Menu</h1>
+		
+		<div class="menu-items-titles">
+			<h2>Appetizers</h2>
+			<div>
+				<div id="appetizers"></div>
+			</div>
+		</div>
+		<hr class="menu-divider">
+		<div class="menu-items-titles">
+			<h2>Sandwiches</h2>
+			<div>
+				<div id="sandwiches"></div>
+			</div>
+		</div>
+		<hr class="menu-divider">
+		<div class="menu-items-titles">
+			<h2>Salads</h2>
+			<div>
+				<div id="salads"></div>
+			</div>
+		</div>
+		<hr class="menu-divider">
+		<div class="menu-items-titles">
+			<h2>Sides</h2>
+			<div>
+				<div id="sides"></div>
+			</div>
+		</div>
+		<hr class="menu-divider">
+		<div class="menu-items-titles">
+			<h2>Drinks</h2>
+			<div>
+				<div id="drinks"></div>
+			</div>
+		</div>
+		<hr class="menu-divider">
+		<div class="menu-items-titles">
+			<h2>Desserts</h2>
+			<div>
+				<div id="desserts"></div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+<div id="modalSuccess" class="modal">
+	<div class="modal-content success-modal">
+		<div class="modal-header">
+			<h2>Confirmation</h2>
+		</div>
+		<div id="successModalInfo">
+			<p>Task completed successfully!</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="btnConfirm">Ok</button>
+		</div>
+	</div>
+</div>
+
+<div id="modalError" class="modal">
+	<div class="modal-content warning-modal">
+		<div class="modal-header">
+			<h2>Error</h2>
+		</div>
+		<div id="errorModalInfo">
+			<p>An error occurred, please try again.</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="btnError">Ok</button>
+		</div>
+	</div>
+</div>
+
+<div id="modalConfirmDelete" class="modal">
+	<div class="modal-content warning-modal">
+		<div class="modal-header">
+			<h2>Confirmation</h2>
+		</div>
+		<div id="deleteItemModalInfo">
+			<p><b>Are you sure you wish to delete this item?</b><br>
+				This action will delete the item completely from the database!
+			</p><br>
+			<p><b>Item Name: <span id="confirmationItemName"></span></b></p>
+		</div>
+		<div class="modal-footer buttons-confirm-delete">
+			<button type="button" id="btnConfirmDelete"><b>Yes</b></button>
+			<button type="button" id="btnCancelDelete">Cancel</button>
+		</div>
+	</div>
+</div>
+
+<div id="modalOrder" class="modal">
+	<div class="modal-content success-modal">
+		<div class="modal-header">
+			<h2>Order Placed</h2>
+		</div>
+		<div id="orderModalInfo">
+			<p>Your order has been placed.<br></p>
+			<div id="orderInfo">
+			
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="btnOrder">Ok</button>
+		</div>
+	</div>
+</div>
+
+<div id="modalAddToOrder" class="modal">
+	<div class="modal-content success-modal">
+		<div class="modal-header">
+			<h2>Confirmation</h2>
+		</div>
+		<div id="addedToOrderModal">
+			<p>Item has been added to the order!<br>
+				Click on the cart to view your order.
+			</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="btnAdded">Ok</button>
+		</div>
+	</div>
+</div>
+
+<div id="modalPayment" class="modal">
+	<div class="modal-content payment-content">
+		<div class="modal-header">
+			<span class="close" id="closePayment">&times;</span>
+			<h2>Payment</h2>
+		</div>
+		<div class="row">
+			<div class="column col-65">
+				<div id="paymentInfo">
+					<div class="container">
+						<h3>Billing Information</h3>
+						<div id="billingInformation">
+							<div id="userInfo">
+								<b>Name: </b>
+								<p id="name" class="userInfo"></p><br>
+								<b>Email: </b>
+								<p id="email" class="userInfo"></p><br>
+								<b>Phone Number: </b>
+								<p id="phone" class="userInfo"></p><br>
+								<b>Address: </b>
+								<p id="address" class="userInfo"></p>
+							</div>
+						</div>
+						<div id="deliveryOption">
+							<label>
+								<input type="checkbox" checked="checked" name="sameadr" id="sameadr"
+									   onclick=checkDelivery()> Delivery address same as billing
+							</label>
+							<hr>
+							<h3>Delivery Information</h3>
+							<div id="deliveryInfo">
+								<label for="deliveryName">Name</label>
+								<input type="text" id="deliveryName" name="deliveryName" placeholder="John M. Doe"
+									   disabled><br>
+								<label for="deliveryEmail">Email</label>
+								<input type="text" id="deliveryEmail" name="deliveryEmail"
+									   placeholder="john@example.com" disabled><br>
+								<label for="deliveryPhone">Phone Number</label>
+								<input type="text" id="deliveryPhone" name="deliveryPhone" placeholder="787-123-4567"
+									   disabled><br>
+								<label for="deliveryAddress">Address</label>
+								<input type="text" id="deliveryAddress" name="deliveryAddress"
+									   placeholder="542 W. 15th Street" disabled><br>
+							</div>
+						</div>
+						<div id="cardInformation">
+							<hr>
+							<h3>Card Information</h3>
+							<div class="icon-container">
+								<i class="fa fa-cc-visa" id="visa" style="color:#1A1F71;"></i>
+								<i class="fa fa-cc-discover" id="discover" style="color:#F9A021;"></i>
+								<i class="fa fa-cc-mastercard" id="mastercard" style="color:#EB001B;"></i>
+								<i class="fa fa-cc-amex" id="amex" style="color:#016FD0;"></i>
+							</div>
+							<label for="cname">Name on Card</label>
+							<input type="text" id="cname" name="cardname" placeholder="John M. Doe" required><br>
+							<label for="ccnum">Card Number</label>
+							<input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"
+								   required minlength="15" maxlength="16" onchange=checkCardNumber()><br>
+							<label for="expDate">Exp Date</label>
+							<input type="text" id="expDate" name="expDate" placeholder="03/24" minlength="5" maxlength="5" required>
+							<label for="cvv">CVV</label>
+							<input type="text" id="cvv" name="cvv" placeholder="352" minlength="3" maxlength="3" required>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column col-35">
+				<div id="paymentModalInfo">
+					<div class="orderSummary">
+						<div class="container">
+							<h4>Cart <i class="fa fa-shopping-cart"></i><span class="price" id="itemTotal"></span></h4>
+							<p id="product"><span class="price"></span></p>
+							<br>
+							<p id="orderTypeInfo">Type: <span id="orderTypeSelected"></span></p><br>
+							<hr>
+							<p>Total<br>
+								<b>
+									<span class="price" id="summarySubtotal"></span><br>
+									<span class="price" id="summaryTaxes"></span><br>
+									<span class="price" id="summaryTotal"></span>
+								</b>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn" id="btnPayOrder" onclick=createOrder()>Checkout</button>
+		</div>
+	</div>
+</div>
+
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

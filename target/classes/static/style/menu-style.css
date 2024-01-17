@@ -1,0 +1,679 @@
+#menu-title
+{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--chill-blue);
+    font-size: 12mm;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: rgba(132, 186, 224, 0.4);
+    border-style: outset;
+}
+
+.menu-items-titles
+{
+    text-align: center;
+    font-size: 6mm;
+    padding: 5px;
+    margin: 5px;
+}
+
+.menu-item
+{
+    display: inline-block;
+    margin: 15px;
+    font-size: 5mm;
+    padding: 10px;
+}
+
+.menu-item-tags
+{
+    display: inline;
+    padding: 3px;
+}
+
+.menu-divider
+{
+    color: var(--chill-green);
+}
+
+.item-picture
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    height: 120px;
+}
+
+#buttonDiv
+{
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/*.sidenav*/
+/*{*/
+/*    width: 130px;*/
+/*    position: absolute;*/
+/*    left: 5px;*/
+/*    overflow-x: hidden;*/
+/*    margin: 4px;*/
+/*    padding: 8px 0;*/
+/*    background-color: rgba(204, 204, 204, 0.5);*/
+/*    border-radius: 5px;*/
+/*}*/
+
+.btnOpenModal
+{
+    padding: 5px;
+    margin: 4px;
+}
+
+.btnAddToOrder
+{
+    padding: 4px;
+    margin-left: 5px;
+    width: 25px;
+}
+
+#btnAddItem
+{
+    margin-top: 19px;
+    padding: 5px;
+}
+
+#modalAddItem
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+.modal-content
+{
+    background-color: #fefefe;
+    border-radius: 4px;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 27%;
+}
+
+.modal-header
+{
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.close
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inputNotes
+{
+    font-size: 3mm;
+}
+
+input
+{
+    padding: 4px;
+    margin: 8px;
+}
+
+/*#sidenav-order*/
+/*{*/
+/*    background-color: rgb(204, 204, 204);*/
+/*    border-radius: 4px 0 0 4px;*/
+/*    width: 18%;*/
+/*    height: 90%;*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    padding: 6px;*/
+/*}*/
+
+#modalUpdateItem
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#orderType
+{
+    margin-left: 5px;
+    margin-bottom: 6px;
+}
+
+#orderTypeOptions
+{
+    display: flex;
+}
+
+
+#itemsOnOrder
+{
+    padding: 5px;
+    border-style: none;
+    border-width: 2px;
+    border-color: rgba(102, 102, 102, 0.3);
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+#customerComments
+{
+    margin: 2px;
+    resize: none;
+    width: 225px;
+    height: 100px;
+}
+
+#btnPlaceOrder
+{
+    margin-top: 19px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#btnPlaceOrder:disabled
+{
+    cursor: default;
+}
+
+.btnRemove
+{
+    padding: 2px;
+    width: 25px;
+    margin-left: 5px;
+    border-style: none;
+    border-radius: 20px;
+}
+
+.btnRemove:hover
+{
+    background-color: white;
+}
+
+.orderItemDivs
+{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.orderSummaryDiv
+{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+#modalSuccess
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#modalError
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+.success-modal
+{
+    background-color: rgb(118, 196, 123);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 25%;
+}
+
+#btnConfirm
+{
+    padding:5px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.warning-modal
+{
+    background-color: rgb(176, 101, 99);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+#btnError
+{
+    padding:5px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+#orderMenu
+{
+    font-size:20px;
+    cursor:pointer;
+    /*     z-index: 1; */
+    position: absolute;
+    background-color: rgb(204, 204, 204);
+    border-radius: 25px;
+    height: 35px;
+    right: 0;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+#manageMenu
+{
+    font-size:20px;
+    cursor:pointer;
+    /* z-index: 1; */
+    position: absolute;
+    background-color: rgb(204, 204, 204);
+    border-radius: 25px;
+    height: 35px;
+    right: 0;
+    padding: 5px;
+    margin-top: 45px;
+    margin-right: 20px;
+}
+
+.sidenav
+{
+    background-color: rgb(204, 204, 204);
+    right: 0;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    padding-left: 5px;
+}
+
+.btnCloseSideNav
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-height: 450px)
+{
+    .sidenav {padding-top: 15px;}
+}
+
+.sidenav-title
+{
+    font-size: 7mm;
+    /*     text-decoration: underline;
+        text-decoration-style: double; */
+}
+
+#removeItem
+{
+    margin: 5px;
+    height: 25px;
+    padding: 2px;
+}
+
+#orderDivider
+{
+    width: 80%;
+}
+
+#modalOrder
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#btnOrder
+{
+    padding:5px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+.tooltip
+{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext
+{
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+#modalAddToOrder
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#btnAdded
+{
+    padding:5px;
+    margin-top: 18px;
+    width: 100%;
+}
+
+#modalPayment
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+.payment-content
+{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 45%;
+}
+
+.orderSummary
+{
+    padding: 0 5px;
+}
+
+.container
+{
+    background-color: #f2f2f2;
+    padding: 5px 20px 20px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+.icon-container
+{
+    font-size: 22px;
+}
+
+.btn
+{
+    background-color: var(--chill-blue);
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover
+{
+    background-color: #6f9ebf;
+}
+
+span.price
+{
+    float:right;
+    color: grey;
+}
+
+#paymentInfo
+{
+    margin-top: 5px;
+}
+
+#availability
+{
+    display: inline;
+    padding: 4px;
+}
+
+#billingInformation
+{
+    padding:5px;
+}
+
+.userInfo
+{
+    display: inline;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.col-35 {
+    width: 35%;
+}
+
+.col-65 {
+    width: 65%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#ccnum
+{
+    width: 155px;
+}
+
+#expDate
+{
+    width: 52px;
+}
+
+#cvv
+{
+    width: 36px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+#modalRemoveItem
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#itemInfo
+{
+    display: none;
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#btnRemoveItem
+{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #bd0606;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+#btnRemoveItem:disabled
+{
+    opacity: 0.7;
+    cursor: default;
+}
+
+#removePictureDisplay
+{
+    width:70%;
+}
+
+#modalConfirmDelete
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    overflow: auto;
+}
+
+#btnConfirmDelete
+{
+    padding:5px;
+    margin-top: 18px;
+    width: 50%;
+}
+
+#btnCancelDelete
+{
+    padding:5px;
+    margin-top: 18px;
+    margin-left: 45px;
+    width: 50%;
+}
+
+.buttons-confirm-delete
+{
+    display: flex;
+}
+
+#deleteItemModalInfo
+{
+    font-size: 20px;
+}

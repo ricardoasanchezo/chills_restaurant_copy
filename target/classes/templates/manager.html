@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Manager</title>
+	<div th:replace="fragments/head :: head"></div>
+</head>
+
+<body>
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	<div id="content">
+		
+		<a href="/manager/view-users">View all users</a>
+	
+	</div>
+</div>
+
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

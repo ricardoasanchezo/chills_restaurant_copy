@@ -1,0 +1,56 @@
+.my-form {
+    background-color: whitesmoke;
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto auto auto;
+}
+
+.my-form h2 {
+    /*color: var(--dark-text-color);*/
+}
+
+.my-form p {
+    display: block;
+    text-align: justify;
+}
+
+.my-form label {
+    font-size: 15px;
+}
+
+.my-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+
+.my-form button {
+    background-color: var(--chill-blue);
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 12px;
+    color: white;
+    transition: var(--transition-time);
+}
+
+.my-form button:hover {
+    background-color: black;
+    color: white;
+}
+
+/*.success-message {*/
+/*    color: darkgreen;*/
+/*    background-color: lightgreen;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 15px;*/
+/*}*/
+
+/*.error-message {*/
+/*    color: darkred;*/
+/*    background-color: lightpink;*/
+/*    padding: 10px;*/
+/*    margin-bottom: 15px;*/
+/*}*/

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Users</title>
+	<div th:replace="fragments/head :: head"></div>
+	<script src="/script/view-users-script.js" defer></script>
+	<link rel="stylesheet" href="/style/view-users-style.css">
+</head>
+<body>
+
+<header id="header" th:insert="~{fragments/navbar :: navbar}"></header>
+
+<div id="page-container">
+	<div id="content">
+		
+		<div class="search-container">
+			<img src="/images/search.svg" class="search-icon" alt="Search icon" >
+			<input type="text" id="searchInput" placeholder="Search..." oninput=searchUsers(this.value.toLowerCase())>
+		</div>
+		
+		<table id="user-table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Role</th>
+					<th>Blocked</th>
+				</tr>
+			</thead>
+			<tbody id="user-table-body">
+			
+			</tbody>
+		</table>
+	
+	</div>
+</div>
+
+<footer th:insert="~{fragments/footer :: footer}"></footer>
+
+</body>
+</html>

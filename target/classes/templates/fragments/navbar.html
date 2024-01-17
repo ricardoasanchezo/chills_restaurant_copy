@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation Bar</title>
+</head>
+<body>
+    <nav id="nav-bar" th:fragment="navbar">
+        <img src="/images/logo.png" alt="Restaurant Logo" >
+        <h1 id="navbar-title"><a class="nav-link" href="/homepage">Chill's Restaurant</a></h1>
+
+        <a class="nav-link" href="/homepage">Home</a>
+        <a class="nav-link" href="/menu">Menu</a>
+<!--		<th:block sec:authorize="hasRole('MANAGER')">-->
+<!--&lt;!&ndash;			<a class="nav-link" href="/manager/view-users">Users</a>&ndash;&gt;-->
+<!--		</th:block>-->
+		<th:block sec:authorize="hasAnyRole('MANAGER', 'EMPLOYEE')">
+            <a class="nav-link" href="/menu-employees">Employee Menu</a>
+			<a class="nav-link" href="/view-users">Users</a>
+			<a class="nav-link" href="/orders">Orders</a>
+			<a class="nav-link" href="/orders/tickets">Order Tickets</a>
+		</th:block>
+        <th:block sec:authorize="isAuthenticated()">
+			<a class="nav-link" href="/profile">Profile</a>
+            <a class="nav-link" href="/logout">Log Out</a>
+        </th:block>
+        <th:block sec:authorize="isAnonymous()">
+            <a class="nav-link" href="/auth/login">Log In</a>
+        </th:block>
+    </nav>
+</body>
+</html>

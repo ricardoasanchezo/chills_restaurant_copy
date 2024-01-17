@@ -1,0 +1,23 @@
+#profile-container
+{
+    padding: 20px;
+    background-color: #DDD;
+}
+
+#profile-info-container
+{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, auto 1fr);
+    justify-items: baseline;
+}
+
+#profile-info-container label::after
+{
+    content: ":";
+}
+
+#profile-info-container input
+{
+    font-size: 18px;
+}

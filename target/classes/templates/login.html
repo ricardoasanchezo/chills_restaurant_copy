@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+	<title>Log In</title>
+	<div th:replace="fragments/head :: head"></div>
+</head>
+<body>
+	
+<form class="my-form flex-column box-shadow" method="post" action="/login">
+	<img src="/images/logo.png" class="logo-medium margin-bottom" alt="Chill's Restaurant Logo">
+	
+	<div th:if="${param.error}" class="red padding margin-bottom">Invalid username or password</div>
+	<div th:if="${param.logout}" class="green padding margin-bottom">You have been logged out</div>
+	
+	<label for="username">Email</label>
+	<input type="text" id="username" name="username" placeholder="" required autofocus>
+
+	<label for="password">Password</label>
+	<input type="password" id="password" name="password" placeholder="" required>
+
+	<button type="submit">Log In</button>
+	
+	<a href="/auth/register">New? Register here!</a>
+	
+<!--	<a href="/auth/employee/login">Employees can log in here too!</a>-->
+</form>
+
+</body>
+</html>
